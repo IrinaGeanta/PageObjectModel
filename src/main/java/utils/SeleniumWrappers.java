@@ -29,4 +29,9 @@ public class SeleniumWrappers extends BaseTest{
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
     }
+
+    public boolean isDisplayed(By locator){
+        waitForElementToBeVisible(locator);
+        return returnElement(locator).isDisplayed();
+    }
 }
