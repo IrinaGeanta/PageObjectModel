@@ -17,6 +17,7 @@ public class BookDetailsTest extends BaseTest {
 
         ShopPage shop = new ShopPage(driver);
         shop.click(shop.aHundredAndOneReceiptsBookLink);
+        //shop.click(shop.cookingWithLoveBookLink);
 
         DetailsPage book = new DetailsPage(driver);
         assertTrue(book.isDisplayed(book.imageBook));
@@ -29,5 +30,6 @@ public class BookDetailsTest extends BaseTest {
         assertTrue(book.isDisplayed(book.bookCategory));
         assertTrue(book.isDisplayed(book.bookTags));
         assertTrue(book.isDisplayed(book.bookId));
+
     }
 }
