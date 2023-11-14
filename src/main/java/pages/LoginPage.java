@@ -15,10 +15,18 @@ public class LoginPage extends SeleniumWrappers {
     public By submitButton = By.className("submit_button");
     public By logoutButton = By.linkText("Logout");
 
+    public By userNameAfterLogin = By.cssSelector("span[class='user_name']");
+    public By settings = By.cssSelector("a[href*='profile']");
+
     public void loginInApp(String user, String pass){
         sendKeys(usernameField,user);
         sendKeys(passwordField,pass);
         click(submitButton);
+    }
+
+    public void openProfileDetails(){
+        click(userNameAfterLogin);
+        click(settings);
     }
 
 
