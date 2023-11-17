@@ -10,4 +10,7 @@ public class BasePage extends SeleniumWrappers {
     public AccountSettingsMenuPage accountSettings = new AccountSettingsMenuPage(driver);
     public EditAddressesPage editAddresses = new EditAddressesPage(driver);
     public ShippingAddressPage shippingAddress = new ShippingAddressPage(driver);
+    public BlogSubMenuPage blogSubMenu = new BlogSubMenuPage(driver);
+    public ClassicCategoryPage classicCategory = new ClassicCategoryPage(driver);
+    public BlogPostPage blogPost = new BlogPostPage(driver);
 }
