@@ -35,5 +35,51 @@ public class XPathExample3 extends BaseTest {
 
         WebElement rating = driver.findElement(By.xpath("//bdi[text()='10.35']/ancestor::span[@class='price']/preceding-sibling::div"));
         jse.executeScript("arguments[0].setAttribute('style', 'background:orange; border:4px solid green')", rating);
+
+        WebElement addToCart = driver.findElement(By.xpath("(//bdi[text()='18.49'])[2]/../../../following-sibling::a"));
+        jse.executeScript("arguments[0].setAttribute('style', 'background:orange; border:4px solid green')", addToCart);
+
+        action.scrollByAmount(0,1000).perform();
+        //xpath operators
+        /*
+         *  = equals
+         * != not equals
+         * < less than
+         * <= less than or equal to
+         * > greater than
+         * >= greather than or equal to
+         * or
+         * and
+         */
+
+        //less than
+        WebElement price7 = driver.findElement(By.xpath("//bdi[text()<8]"));
+        jse.executeScript("arguments[0].setAttribute('style', 'background:orange; border:4px solid green')", price7);
+
+       //greater than
+        WebElement price100 = driver.findElement(By.xpath("//bdi[text()>80.20]"));
+        jse.executeScript("arguments[0].setAttribute('style', 'background:orange; border:4px solid green')", price100);
+
+        //multiple operators
+
+        WebElement price8020 = driver.findElement(By.xpath("//bdi[text()>80.00 and text()<100]"));
+        jse.executeScript("arguments[0].setAttribute('style', 'background:orange; border:4px solid green')", price8020);
+
+        /*
+         * Ne referim la elementul care contine 2, adica numarul de pagini din shop (jos sub carti)
+         *
+         * Varianta mai complexa :
+         * //*[self::span or self::a][contains(@class, 'page-numbers') and not(contains(text(), '1') or contains(text(), '→'))]
+         *
+         * Varianta mai simpla :
+         *	//ul/li[*>1]
+         *
+         * //*
+         * *
+         * @*
+         *
+         *
+         */
+
     }
 }
