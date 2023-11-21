@@ -23,6 +23,7 @@ public class SeleniumWrappers extends BaseTest{
 
     public void sendKeys(By locator, String text){
         waitForElementToBeVisible(locator);
+        returnElement(locator).clear();
         returnElement(locator).sendKeys(text);
     }
 

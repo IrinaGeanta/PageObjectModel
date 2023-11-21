@@ -13,4 +13,6 @@ public class BasePage extends SeleniumWrappers {
     public BlogSubMenuPage blogSubMenu = new BlogSubMenuPage(driver);
     public ClassicCategoryPage classicCategory = new ClassicCategoryPage(driver);
     public BlogPostPage blogPost = new BlogPostPage(driver);
+
+    public SearchResultPage searchResultPage = new SearchResultPage();
 }
