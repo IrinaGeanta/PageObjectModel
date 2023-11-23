@@ -7,6 +7,9 @@ public class BasePage extends SeleniumWrappers {
     public MenuPage menu = new MenuPage(driver);
     public LoginPage login = new LoginPage(driver);
     public ShopPage shop = new ShopPage(driver);
+    public DetailsPage detailsPage = new DetailsPage(driver);
+    public CartPage cartPage = new CartPage();
+    public CheckoutPage checkoutPage = new CheckoutPage();
     public AccountSettingsMenuPage accountSettings = new AccountSettingsMenuPage(driver);
     public EditAddressesPage editAddresses = new EditAddressesPage(driver);
     public ShippingAddressPage shippingAddress = new ShippingAddressPage(driver);

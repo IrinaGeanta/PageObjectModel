@@ -37,8 +37,18 @@ public class SeleniumWrappers extends BaseTest{
         wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
     }
 
+    public void waitForElementToBeClickable(By locator){
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(locator));
+    }
+
     public boolean isDisplayed(By locator){
         waitForElementToBeVisible(locator);
         return returnElement(locator).isDisplayed();
+    }
+
+    public String getText(By locator){
+        waitForElementToBeVisible(locator);
+        return returnElement(locator).getText();
     }
 }
