@@ -13,6 +13,9 @@ public class PlaceAnOrderTest extends BaseTest {
         app.searchResultPage.click(app.searchResultPage.loadMoreResults);
         app.searchResultPage.click(app.searchResultPage.loadMoreResults);
         app.searchResultPage.click(app.searchResultPage.storyAboutMeBookLink);
+        // aici probabil ar fi trebuit sa fac un search mai destept, dc nu e pe pagina sa dea loadmore ..
+        // o sa incerc sa fac pana data viitoare.. tot pendulez intre faptul ca stiu ca e pe pagina care e, sau poate
+        // sa fi facut inteligent treaba. ..
 
         assertEquals(driver.getCurrentUrl(),"https://keybooks.ro/shop/the-story-about-me/");
 
