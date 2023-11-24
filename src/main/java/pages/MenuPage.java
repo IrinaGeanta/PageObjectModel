@@ -20,6 +20,7 @@ public class MenuPage extends SeleniumWrappers {
     public By searchField = By.cssSelector("input[class='search_field']");
 
     public By blog = By.xpath("(//a[text()='Blog'])[1]");
+    public By aboutLink = By.linkText("ABOUT");
 
     public void navigateTo(By locator){
         click(locator);

@@ -3,6 +3,7 @@ package utils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -50,5 +51,22 @@ public class SeleniumWrappers extends BaseTest{
     public String getText(By locator){
         waitForElementToBeVisible(locator);
         return returnElement(locator).getText();
+    }
+
+    public void hoverElement(By locator){
+        Actions action = new Actions(driver);
+        action.moveToElement(returnElement(locator)).perform();
+
+    }
+
+    public void dragAndDrop(By locator, int x, int y){
+        Actions action = new Actions(driver);
+       // action.dragAndDropBy(returnElement(locator),x,y).perform();
+        action.moveToElement(returnElement(locator)).clickAndHold().moveByOffset(x,y).release().perform();
+    }
+
+    public void scrollVertically(int pixels){
+        Actions action = new Actions(driver);
+        action.scrollByAmount(0,pixels).perform();
     }
 }

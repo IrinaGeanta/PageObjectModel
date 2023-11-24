@@ -13,6 +13,8 @@ public class ShopPage extends SeleniumWrappers {
 
     public By cookingWithLoveBookLink = By.linkText("Cooking with love");
     public By aHundredAndOneReceiptsBookLink = By.linkText("A hundred and one receipes");
+    public By sliderInitialPosition = By.cssSelector("span[style='left: 0%;']");
+    public By sliderFinalPosition = By.cssSelector("span[style='left: 100%;']");
 
     public By dropdown = By.name("orderby");
 

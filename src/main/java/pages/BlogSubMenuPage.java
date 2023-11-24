@@ -10,4 +10,6 @@ public class BlogSubMenuPage extends SeleniumWrappers {
         this.driver = driver;
     }
     public By classicOption = By.xpath("(//a[text()='Classic'])[1]");
+    public By portfolioOption = By.linkText("Portfolio");
+    public By masonry = By.linkText("Masonry");
 }

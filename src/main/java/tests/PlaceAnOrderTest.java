@@ -33,12 +33,9 @@ public class PlaceAnOrderTest extends BaseTest {
         assertEquals(app.cartPage.getText(app.cartPage.updateCartMessage), "Cart updated.");
 
         Actions action = new Actions(driver);
-        action.scrollToElement(app.returnElement(app.cartPage.proceedToCheckout));
+        action.scrollToElement(app.returnElement(app.cartPage.proceedToCheckout)).perform();
 
-        Thread.sleep(2000);
-        // aici e sf pt mine de ce nu merge fara sleep, mi-a iesit fara sleep unconsistently though dc faceam
-        // scroll by amount din 2 bucati ca altfel tot asa nu pricep de ce nu vrea sa scroleze acolo  fara acest sleep...
-        // nu inteleg
+        //aici nu facusem perform()
 
         app.cartPage.click(app.cartPage.proceedToCheckout);
         assertEquals(driver.getCurrentUrl(),"https://keybooks.ro/checkout/");
