@@ -11,7 +11,7 @@ import java.time.Duration;
 public class BaseTest {
     public static WebDriver driver;
     public BasePage app;
-    @BeforeClass
+    @BeforeClass(alwaysRun = true)
     public void setup(){
         driver = new ChromeDriver();
         driver.manage().window().maximize();
@@ -21,7 +21,7 @@ public class BaseTest {
         app = new BasePage();
     }
 
-    @AfterClass
+    @AfterClass(alwaysRun = true)
 
     public void tearDown() throws InterruptedException {
         Thread.sleep(4000);
