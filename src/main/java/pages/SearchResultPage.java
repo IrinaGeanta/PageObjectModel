@@ -1,6 +1,10 @@
 package pages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.TimeoutException;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import utils.SeleniumWrappers;
 
 public class SearchResultPage extends SeleniumWrappers {
@@ -10,6 +14,19 @@ public class SearchResultPage extends SeleniumWrappers {
     public By getbookPicture (String picture){
         return By.xpath("//div[contains(@data-image,'"+picture+"')]");
     }
+    public void searchInSearchResult(By locator){
 
+        while (isElementPresent(loadMoreResults)){
+            if (isElementPresent(locator)){
+                click(locator);
+            }
+            else {
+                click(loadMoreResults);
+            }
+        }
+
+
+
+    }
 
 }

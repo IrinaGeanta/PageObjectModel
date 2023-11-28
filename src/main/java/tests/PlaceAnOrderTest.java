@@ -10,12 +10,7 @@ public class PlaceAnOrderTest extends BaseTest {
     @Test(priority=1)
     public void searchAndAddToCart(){
         app.menu.search("The story about me");
-        app.searchResultPage.click(app.searchResultPage.loadMoreResults);
-        app.searchResultPage.click(app.searchResultPage.loadMoreResults);
-        app.searchResultPage.click(app.searchResultPage.storyAboutMeBookLink);
-        // aici probabil ar fi trebuit sa fac un search mai destept, dc nu e pe pagina sa dea loadmore ..
-        // o sa incerc sa fac pana data viitoare.. tot pendulez intre faptul ca stiu ca e pe pagina care e, sau poate
-        // sa fi facut inteligent treaba. ..
+        app.searchResultPage.searchInSearchResult(app.searchResultPage.storyAboutMeBookLink);
 
         assertEquals(driver.getCurrentUrl(),"https://keybooks.ro/shop/the-story-about-me/");
 
@@ -34,7 +29,7 @@ public class PlaceAnOrderTest extends BaseTest {
 
         Actions action = new Actions(driver);
         action.scrollToElement(app.returnElement(app.cartPage.proceedToCheckout)).perform();
-
+        Thread.sleep(2000);
         //aici nu facusem perform()
 
         app.cartPage.click(app.cartPage.proceedToCheckout);
