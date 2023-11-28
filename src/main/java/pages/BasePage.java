@@ -20,6 +20,8 @@ public class BasePage extends SeleniumWrappers {
 
     public SearchResultPage searchResultPage = new SearchResultPage();
     public RomansCategoryPage romansCategoryPage = new RomansCategoryPage();
+    public PostFormatsPage postFormat = new PostFormatsPage();
+    public ContactPage contactPage = new ContactPage();
 
 
 }

@@ -29,7 +29,7 @@ public class PlaceAnOrderTest extends BaseTest {
 
         Actions action = new Actions(driver);
         action.scrollToElement(app.returnElement(app.cartPage.proceedToCheckout)).perform();
-        Thread.sleep(2000);
+        //Thread.sleep(2000);
         //aici nu facusem perform()
 
         app.cartPage.click(app.cartPage.proceedToCheckout);
