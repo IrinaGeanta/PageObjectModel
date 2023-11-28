@@ -12,4 +12,5 @@ public class BlogSubMenuPage extends SeleniumWrappers {
     public By classicOption = By.xpath("(//a[text()='Classic'])[1]");
     public By portfolioOption = By.linkText("Portfolio");
     public By masonry = By.linkText("Masonry");
+    public By postFormatsLink = By.linkText("Post Formats");
 }
