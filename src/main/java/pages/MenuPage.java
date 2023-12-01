@@ -19,6 +19,7 @@ public class MenuPage extends SeleniumWrappers {
     public By searchIcon = By.cssSelector("button[class*='icon-search']");
     public By searchField = By.cssSelector("input[class='search_field']");
     public By contactsLink = By.linkText("CONTACTS");
+    public By eventsLink = By.linkText("EVENTS");
 
     public By blog = By.xpath("(//a[text()='Blog'])[1]");
     public By booksLink = By.xpath("(//a[text() = 'Books'])[1]");

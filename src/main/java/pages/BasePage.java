@@ -22,6 +22,8 @@ public class BasePage extends SeleniumWrappers {
     public RomansCategoryPage romansCategoryPage = new RomansCategoryPage();
     public PostFormatsPage postFormat = new PostFormatsPage();
     public ContactPage contactPage = new ContactPage();
+    public EventsPage eventsPage = new EventsPage();
+    public GenericEventPage genericEvent = new GenericEventPage();
 
 
 }
