@@ -26,6 +26,6 @@ public class BaseTest {
     public void tearDown() throws InterruptedException {
         Thread.sleep(4000);
         //driver.close(); // inchide tabu
-        //driver.quit(); // inchide browseru
+        driver.quit(); // inchide browseru
     }
 }
