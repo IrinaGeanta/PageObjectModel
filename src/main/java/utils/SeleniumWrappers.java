@@ -1,9 +1,6 @@
 package utils;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.StaleElementReferenceException;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -70,6 +67,15 @@ public class SeleniumWrappers extends BaseTest{
         Actions action = new Actions(driver);
         action.scrollByAmount(0,pixels).perform();
     }
+    public void scrollHorizontally(int pixels){
+        Actions action = new Actions(driver);
+        action.scrollByAmount(pixels,0).perform();
+    }
+    public void jsScrollVertically(int pixels){
+        JavascriptExecutor jse = (JavascriptExecutor) driver;
+        jse.executeScript("window.scrollBy(0, " + pixels + ")");
+    }
+
 
     public boolean isElementPresent(By locator){
         boolean isPresent = true;
