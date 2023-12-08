@@ -25,6 +25,7 @@ public class BasePage extends SeleniumWrappers {
     public EventsPage eventsPage = new EventsPage();
     public GenericEventPage genericEvent = new GenericEventPage();
     public AudioPostPage audioPost = new AudioPostPage();
+    public GalleryFormatPage galleryFormat = new GalleryFormatPage();
 
 
 }

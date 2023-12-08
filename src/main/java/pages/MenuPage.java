@@ -21,6 +21,10 @@ public class MenuPage extends SeleniumWrappers {
     public By contactsLink = By.linkText("CONTACTS");
     public By eventsLink = By.linkText("EVENTS");
 
+    public By facebookLink = By.xpath("(//a[contains(@href,'keytraining.ro')])[1]");
+    public By twitterLink = By.xpath("(//a[contains(@href,'twitter')])[1]");
+    public By instagramLink = By.xpath("(//a[contains(@href,'instagram')])[1]");
+
     public By blog = By.xpath("(//a[text()='Blog'])[1]");
     public By booksLink = By.xpath("(//a[text() = 'Books'])[1]");
     public By aboutLink = By.linkText("ABOUT");

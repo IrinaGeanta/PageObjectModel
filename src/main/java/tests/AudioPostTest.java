@@ -4,6 +4,8 @@ import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 import utils.BaseTest;
 
+import static org.testng.Assert.assertTrue;
+
 public class AudioPostTest extends BaseTest {
 
     @Test
@@ -19,12 +21,10 @@ public class AudioPostTest extends BaseTest {
                 .release()
                 .perform();
 
-
         action.clickAndHold(app.returnElement(app.audioPost.soundSlider))
                         .scrollByAmount(50,0)
                         .release()
                         .perform();
-
-
+        
     }
 }
