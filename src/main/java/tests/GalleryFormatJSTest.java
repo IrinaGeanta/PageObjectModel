@@ -12,16 +12,9 @@ public class GalleryFormatJSTest extends BaseTest {
     public void galleryFormat(){
         JavascriptExecutor jse = (JavascriptExecutor) driver;
 
-        String jsHover = "var obj = document.createEvent('MouseEvent');"
-                + "obj.initMouseEvent('mouseover', true);"
-                + "document.getElementsByClassName('sf-with-ul')[0].dispatchEvent(obj)";
+        jse.executeScript("document.getElementsByClassName('sub-menu animated fast fadeOut')[0].childNodes[7].childNodes[0].click()");
 
-        jse.executeScript(jsHover);
-
-        //am vrut eu sa merg numa pe elemente identificate in consola dar se pare ca nu am putut scoate acel post format link, si nici galleryFormat ..
-        jse.executeScript("arguments[0].click()",app.returnElement(app.blogSubMenu.postFormatsLink));
-
-        jse.executeScript("arguments[0].scrollIntoView();arguments[0].click()",app.returnElement(app.postFormat.galleryFormatLink));
+        jse.executeScript("document.getElementsByClassName('post_format_gallery')[0].childNodes[1].childNodes[0].click()");
         jse.executeScript("document.getElementsByClassName('comment-form')[0].scrollIntoView()");
         String comment = "document.getElementsByName('comment')[0].value='comment:)" + Math.random() + "'";
 

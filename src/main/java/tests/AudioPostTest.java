@@ -25,6 +25,6 @@ public class AudioPostTest extends BaseTest {
                         .scrollByAmount(50,0)
                         .release()
                         .perform();
-        
+
     }
 }
